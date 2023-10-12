@@ -6,6 +6,8 @@ export const AppProvider = ({ children }) => {
 
     const [isDarkMode, setIsDarkMode] = useState(false);
 
+    const [searchTerm, setSearchTerm] = useState('morty')
+
     const toggleDarkTheme = () => {
         const newDarkTheme = !isDarkMode;
         setIsDarkMode(newDarkTheme);
@@ -13,7 +15,7 @@ export const AppProvider = ({ children }) => {
         body.classList.toggle('dark-theme');
     }
 
-    return <AppContext.Provider value={{ isDarkMode, toggleDarkTheme }}>
+    return <AppContext.Provider value={{ isDarkMode, toggleDarkTheme, searchTerm, setSearchTerm }}>
         {children}
     </AppContext.Provider>
 }
