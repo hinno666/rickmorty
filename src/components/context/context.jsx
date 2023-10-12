@@ -4,9 +4,16 @@ const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
 
-    const hello = 'hello';
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
-    return <AppContext.Provider value={{ hello }}>
+    const toggleDarkTheme = () => {
+        const newDarkTheme = !isDarkMode;
+        setIsDarkMode(newDarkTheme);
+        const body = document.querySelector('body');
+        body.classList.toggle('dark-theme');
+    }
+
+    return <AppContext.Provider value={{ isDarkMode, toggleDarkTheme }}>
         {children}
     </AppContext.Provider>
 }

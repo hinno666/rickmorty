@@ -1,0 +1,29 @@
+::placeholder {
+    font-family: inherit;
+    color: var(--grey-400);
+}
+
+.search-form {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.search-form-input {
+    border-color: var(--primary-300);
+    transition: var(--darkModeTransition);
+    height: 20px;
+}
+
+.search-form-btn {
+    cursor: pointer;
+    background-color: var(--red-light);
+    border: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.search-form-btn:hover {
+    background: var(--primary-300);
+    color: var(--black);
+}
