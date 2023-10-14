@@ -3,6 +3,8 @@ import { customFetch } from "../../utils";
 import { useGlobalContext } from "../context/context";
 
 import './Characters.css'
+import { Link } from "react-router-dom";
+import { Loader } from "../Loader/Loader";
 
 export const Characters = () => {
 
@@ -23,7 +25,7 @@ export const Characters = () => {
   if (isLoading) {
     return (
       <section className='image-container'>
-        <h4>Loading...</h4>
+        <Loader />
       </section>
     );
   }
@@ -48,17 +50,20 @@ export const Characters = () => {
     <section className='image-container'>
       {results.map((item) => {
         return (
-          <div className="image-card" key={item.id}>
-            <img
-              src={item.image}
-              alt={item.alt_description}
-              className='img'
-            ></img>
-            <div className="card-description">
-              <div className="card-description-item">{item.name}</div>
-              <div className="card-description-item">{item.gender}</div>
-              <div className="card-description-item">{item.status}</div>
-              <div className="card-description-item">{item.location.name}</div>
+          <div className="flip-card" key={item.id}>
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <img src={item.image} alt={item.alt_description} className='img'></img>
+              </div>
+              <div className="flip-card-back">
+                <div className="card-description">
+                  <div className="card-description-item">{item.name}</div>
+                  <Link className="details-btn" to={`/character/${item.id}`}>
+                    <span className="actual-text">&nbsp;view&nbsp;</span>
+                    <span aria-hidden="true" className="hover-text">&nbsp;view&nbsp;</span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         );

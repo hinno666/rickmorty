@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 ::after,
 ::before {
     margin: 0;
@@ -8,6 +13,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -18,6 +24,7 @@ body {
         Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
     line-height: 1;
+    height: 100%;
 }
 
 a {
@@ -26,6 +33,10 @@ a {
 
 img {
     width: 100%;
+}
+
+#root {
+    height: 100%;
 }
 
 :root {
@@ -69,11 +80,10 @@ img {
     --fixed-width: 600px;
     --view-width: 90vw;
     /* box shadow*/
-    --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-1: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-3: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
     /* dark mode setup */
@@ -82,11 +92,23 @@ img {
     --backgroundColor: var(--grey-50);
     --textColor: var(--grey-900);
     --darkModeTransition: color 0.3s ease-in-out,
-        background-color 0.3s ease-in-out;
+        /* BUTTON */
+        --background-color 0.3s ease-in-out;
+    --border-right: 6px;
+    --text-stroke-color: rgba(201, 187, 187, 0.6);
+    --animation-color: #ebfc53;
+    --fs-size: 2em;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 main {
     max-width: 1120px;
     width: 90vw;
     margin: 0 auto;
+    flex: 1 1 auto;
 }
