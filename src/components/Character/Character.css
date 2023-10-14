@@ -1,0 +1,54 @@
+.character-page-name {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.character-page-container {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.character-page-img img {
+    border-radius: 10px;
+    box-shadow: var(--shadow-3);
+}
+
+.character-page-about {
+    font-size: 25px;
+    text-align: center;
+}
+
+.character-page-about-info ul {
+    margin: 0;
+    padding: 0;
+}
+
+.character-page-about-info ul li {
+    list-style: none;
+    line-height: 120%;
+}
+
+.character-page-about-info ul li span {
+    font-weight: 600;
+}
+
+.back-btn {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--textColor);
+    padding: 10px;
+    border: 1px var(--animation-color) solid;
+    margin-top: 150px;
+    transition: var(--transition);
+}
+
+.back-btn:hover {
+    background: var(--animation-color);
+    color: var(--black);
+}

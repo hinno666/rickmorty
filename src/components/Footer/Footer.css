@@ -1,0 +1,7 @@
+.footer {
+    padding: 20px 0;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    border-top: 1px rgb(197, 201, 0) solid;
+}

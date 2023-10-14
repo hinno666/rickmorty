@@ -3,6 +3,7 @@ import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 
 
 import './ThemeToggle.css'
+import { Link } from "react-router-dom"
 
 export const ThemeToggle = () => {
 
@@ -10,8 +11,8 @@ export const ThemeToggle = () => {
 
   return (
     <section className="toggle-theme">
-      <div className="logo">
-        <h1>
+      <Link to="/">
+        <div className="logo">
           <span>r</span>
           <span>i</span>
           <span>c</span>
@@ -21,8 +22,8 @@ export const ThemeToggle = () => {
           <span>r</span>
           <span>t</span>
           <span>y</span>
-        </h1>
-      </div>
+        </div>
+      </Link>
       <button className="toggle-theme-btn" onClick={toggleDarkTheme}>
         {isDarkMode ? (
           <BsFillSunFill className="toggle-icon" />
