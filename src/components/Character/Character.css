@@ -20,6 +20,7 @@
 .character-page-about {
     font-size: 25px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .character-page-about-info ul {
@@ -45,6 +46,7 @@
     padding: 10px;
     border: 1px var(--animation-color) solid;
     margin-top: 150px;
+    margin-bottom: 50px;
     transition: var(--transition);
 }
 
