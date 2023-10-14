@@ -9,6 +9,7 @@
     animation: rotation 1s linear infinite;
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
 }
 
 .loader::after {
