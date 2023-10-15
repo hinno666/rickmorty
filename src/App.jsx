@@ -1,16 +1,24 @@
-import { Routes, Route } from 'react-router-dom'
-import { Home } from './components/pages/Home'
-import { InnerCharacter } from './components/pages/InnerCharacter'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Footer } from './components/Footer/Footer'
+import { Home, InnerCharacter } from './pages'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+  {
+    path: '/character/:id',
+    element: <InnerCharacter />,
+  }
+])
+
 
 function App() {
   return (
     <div className='wrapper'>
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/character/:id" element={<InnerCharacter />} />
-        </Routes>
+        <RouterProvider router={router} />
       </main>
       <Footer />
     </div>

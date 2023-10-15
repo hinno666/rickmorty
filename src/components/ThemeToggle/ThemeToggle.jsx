@@ -11,8 +11,8 @@ export const ThemeToggle = () => {
 
   return (
     <section className="toggle-theme">
-      <Link to="/">
-        <div className="logo">
+      <Link to="/" className="logo">
+        <div>
           <span>r</span>
           <span>i</span>
           <span>c</span>
